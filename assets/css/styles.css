@@ -597,6 +597,7 @@ input::placeholder, textarea::placeholder{
   border-radius: 18px;
   pointer-events:none;
   opacity: .5;
+  
 }
 
 .hero-mini{
