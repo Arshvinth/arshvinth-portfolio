@@ -597,12 +597,6 @@ input::placeholder, textarea::placeholder{
   border-radius: 18px;
   pointer-events:none;
   opacity: .5;
-  background:
-    linear-gradient(var(--accent), var(--accent)) left top / 18px 2px no-repeat,
-    linear-gradient(var(--accent), var(--accent)) left top / 2px 18px no-repeat,
-
-    linear-gradient(var(--accent2), var(--accent2)) right bottom / 18px 2px no-repeat,
-    linear-gradient(var(--accent2), var(--accent2)) right bottom / 2px 18px no-repeat;
 }
 
 .hero-mini{
