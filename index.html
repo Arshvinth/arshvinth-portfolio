@@ -1,0 +1,562 @@
+<!--
+  index.html
+  ----------
+  One-page portfolio (HTML/CSS/JS).
+  What to update later:
+  - Replace "YourName" in the navbar brand if you want a different display.
+  - Add real project links (Repo/Live/Demo) where you see href="#".
+  - Put your resume PDF at: assets/Arshvinth_Resume.pdf (or change the link).
+  - Add your photo at: assets/img/profile.jpg and keep the hero photo section as-is.
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Basic meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Arshvinth — Software Engineering Intern</title>
+
+    <meta name="description"
+        content="Portfolio of Arshvinth — Software Engineering undergraduate at SLIIT (Graduating 2027). Full-stack web & mobile developer (React, React Native, Node.js, Java, Python)." />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+    <!-- Sticky header -->
+    <header class="site-header">
+        <nav class="nav container">
+            <!-- Brand -->
+            <a class="brand" href="#top">Arshvinth</a>
+
+            <!-- Mobile menu button -->
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
+                ☰
+            </button>
+
+            <!-- Nav links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+                <!-- Resume (put your PDF in assets/ or update path) -->
+                <li>
+                    <a class="btn small" href="assets/Arshvinth-SE intern.pdf" target="_blank" rel="noreferrer">
+                        Resume
+                    </a>
+                </li>
+
+                <!-- Theme toggle -->
+                <li>
+                    <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme"
+                        title="Toggle theme">
+                        <span id="themeIcon">🌙</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="top">
+        <!-- HERO -->
+        <!-- HERO (style like reference) -->
+        <section class="hero container reveal">
+            <div class="hero-like">
+                <!-- LEFT -->
+                <div class="hero-left">
+                    <p class="hero-hello">Hello,</p>
+
+                    <h1 class="hero-name">
+                        I’m <span class="accent">Arshvinth</span>
+                    </h1>
+
+                    <p class="hero-role">Software Developer</p>
+
+                    <p class="subhead">
+                        I build mobile and web apps with clean UI/UX, reliable REST APIs, and solid database
+                        integration.
+                    </p>
+
+                    <div class="cta-row">
+                        <a class="btn" href="#projects">My Projects</a>
+                        <a class="btn ghost" href="assets/Arshvinth-SE intern.pdf" target="_blank" rel="noreferrer">My
+                            Resume</a>
+                    </div>
+
+                    <div class="social-row">
+                        <a href="https://github.com/Arshvinth?tab=repositories" target="_blank"
+                            rel="noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/arshvinth-sakthivel-7ba0942a9/" target="_blank"
+                            rel="noreferrer">LinkedIn</a>
+                        <a href="mailto:arshvinths@gmail.com">arshvinths@gmail.com</a>
+                    </div>
+
+                    <div class="hero-mini">
+                        <div class="chip">
+                            <span class="chip-dot"></span>
+                            Open to Internship
+                        </div>
+                        <div class="chip">Full-stack (Web + Mobile)</div>
+                        <div class="chip">GPA: 3.6/4.0</div>
+                    </div>
+
+
+                    <!-- Skill chips row (like the reference bottom labels) -->
+                    <div class="hero-chips">
+                        <span class="chip">Java</span>
+                        <span class="chip">React</span>
+                        <span class="chip">React Native</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">Node.js</span>
+                        <span class="chip">Express.js</span>
+                        <span class="chip">C++ </span>
+                        <span class="chip">Python </span>
+                        <span class="chip">MongoDB</span>
+                        <span class="chip">MS SQL</span>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="hero-right">
+                    <!-- Circular ring + glow behind image -->
+                    <div class="hero-ring" aria-hidden="true"></div>
+
+                    <!-- Your photo -->
+                    <img class="hero-cutout" src="assets/img/profile-2.png" alt="Portrait of Arshvinth"
+                        loading="lazy" />
+
+                    <!-- Optional: small decorative corner marks -->
+                    <div class="hero-corners" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK ABOUT -->
+        <section class="section container reveal" id="about">
+            <div class="section-header">
+                <h2>Summary</h2>
+            </div>
+
+            <div class="panel">
+                <p class="muted" style="margin: 0;">
+                    Software Engineering undergraduate currently pursuing a BSc (Hons) in Software Engineering at SLIIT
+                    (Graduating 2027),
+                    with hands-on experience developing web and mobile applications using Java, Python, Node.js,
+                    React.js, and React Native.
+                    Knowledge of REST APIs and database integration with continuous exposure to full-stack and machine
+                    learning academic projects.
+                    Seeking a Software Engineering Internship to apply academic knowledge in building practical,
+                    scalable solutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section container reveal">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <p>Academic + full-stack + ML projects</p>
+            </div>
+
+            <div class="grid">
+                <!-- Project 1 -->
+                <article class="card project-card">
+                    <header class="project-header">
+                        <div class="project-title">
+                            <h3>Smart Travel Scout (AI‑Powered Recommendation App)</h3>
+                            <p class="muted project-subtitle">
+                                Full-stack AI web app that recommends travel experiences from natural language queries,
+                                grounded to a fixed dataset.
+                            </p>
+                        </div>
+                    </header>
+
+                    <ul class="tags">
+                        <li>Next.js</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>OpenAI API</li>
+                        <li>Zod</li>
+                        <li>Vercel</li>
+                    </ul>
+
+                    <div class="highlights">
+                        <p class="highlights-title">Highlights</p>
+                        <ul class="bullets compact">
+                            <li>Built an end-to-end AI-powered recommendation system using natural language input.</li>
+                            <li>Integrated LLM with strict prompt constraints and schema validation to prevent
+                                hallucinations.</li>
+                            <li>Implemented backend API routes with secure environment variable handling.</li>
+                            <li>Designed interactive UI with filters (price, tags) and dynamic result rendering.</li>
+                            <li>Enforced data grounding using whitelist filtering against a fixed inventory dataset.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <footer class="card-actions">
+                        <a href="https://github.com/Arshvinth/smart-travel-scout.git" target="_blank"
+                            rel="noreferrer">Repo</a>
+                        <a href="https://smart-travel-scout-ik9e5mw04-arshvinths-projects.vercel.app" target="_blank"
+                            rel="noreferrer">Live</a>
+                    </footer>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="card project-card">
+                    <header class="project-header">
+                        <div class="project-title">
+                            <h3>Vehicle Fuel Consumption Predictor</h3>
+                            <p class="muted project-subtitle">
+                                ML app that predicts vehicle fuel consumption from vehicle + trip inputs.
+                            </p>
+                        </div>
+                    </header>
+
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>Scikit‑learn</li>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Random Forest</li>
+                    </ul>
+
+                    <div class="highlights">
+                        <p class="highlights-title">Highlights</p>
+                        <ul class="bullets compact">
+                            <li>Trained a Random Forest Regression model to generate consumption predictions.</li>
+                            <li>Performed preprocessing, encoding, and feature scaling for model training.</li>
+                            <li>Designed a modern UI for input collection + real-time prediction display.</li>
+                            <li>Implemented input validation and business logic.</li>
+                        </ul>
+                    </div>
+
+                    <footer class="card-actions">
+                        <a href="https://github.com/Arshvinth/FuelConsumptionPredicter_Frontend.git" target="_blank"
+                            rel="noreferrer">Repo - Backend</a>
+                        <a href="https://github.com/Arshvinth/FuelConsumptionPredicter_Backend.git" target="_blank"
+                            rel="noreferrer">Repo - Frontend</a>
+                        <a href="#" target="_blank" rel="noreferrer">Demo</a>
+                    </footer>
+                </article>
+
+
+                <!-- Project 3 -->
+                <article class="card project-card">
+                    <header class="project-header">
+                        <div class="project-title">
+                            <h3>Smart Health - Mobile App</h3>
+                            <p class="muted project-subtitle">
+                                Medical Record Management module for secure patient history retrieval and vital updates.
+                            </p>
+                        </div>
+                    </header>
+
+                    <ul class="tags">
+                        <li>React Native</li>
+                        <li>Node.js</li>
+                        <li>MongoDB</li>
+                        <li>REST API</li>
+                        <li>Jest</li>
+                        <li>Git</li>
+                    </ul>
+
+                    <div class="highlights">
+                        <p class="highlights-title">Highlights</p>
+                        <ul class="bullets compact">
+                            <li>Implemented digital card scanning + voice command support to improve patient
+                                identification workflow.</li>
+                            <li>Applied SOLID principles for maintainable, scalable components.</li>
+                            <li>Achieved ~80% unit test coverage using automated testing.</li>
+                            <li>Collaborated in an Agile environment with Git-based version control.</li>
+                        </ul>
+                    </div>
+
+                    <footer class="card-actions">
+                        <a href="https://github.com/Arshvinth/SmartHealth_App_backend.git" target="_blank"
+                            rel="noreferrer">Repo - Backend</a>
+                        <a href="https://github.com/Arshvinth/SmartHealth_App_frontend.git" target="_blank"
+                            rel="noreferrer">Repo - Frontend</a>
+                        <a href="https://drive.google.com/file/d/17oxZJ_-QBAwLf2EzZBMI8byc_lL-vawg/view" target="_blank"
+                            rel="noreferrer">Live Demo</a>
+                    </footer>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="card project-card">
+                    <header class="project-header">
+                        <div class="project-title">
+                            <h3>Illegal Fishing Reporting System</h3>
+                            <p class="muted project-subtitle">
+                                Cross-platform (Web & Mobile) system to report and analyze illegal fishing activities
+                                with species tracking and analytics.
+                            </p>
+                        </div>
+                    </header>
+
+                    <ul class="tags">
+                        <li>React.js</li>
+                        <li>React Native</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MongoDB</li>
+                        <li>Cloudinary</li>
+                        <li>REST API</li>
+                    </ul>
+
+                    <div class="highlights">
+                        <p class="highlights-title">Highlights</p>
+                        <ul class="bullets compact">
+                            <li>Developed species management module (web) enabling CRUD operations and structured data
+                                handling.</li>
+                            <li>Implemented researcher tools to submit/manage species requests with search and
+                                filtering.</li>
+                            <li>Integrated Cloudinary and Wikipedia APIs to enhance species detail views with images and
+                                external data.</li>
+                            <li>Contributed to analytics dashboards showing illegal fishing trends and species insights
+                                using charts.</li>
+                            <li>Collaborated across web + mobile to keep functionality consistent across platforms.</li>
+                        </ul>
+                    </div>
+
+                    <footer class="card-actions">
+                        <a href="https://github.com/emxth/2503_AquaShield_frontend.git" target="_blank"
+                            rel="noreferrer">Repo - frontend[Web]</a>
+                        <a href="https://github.com/Arshvinth/AquaShield_MobileApp.git" target="_blank"
+                            rel="noreferrer">Repo - frontend[Mobile]</a>
+                        <a href="https://github.com/emxth/2503_AquaShield_backend.git" target="_blank"
+                            rel="noreferrer">Repo - backend</a>
+                        <a href="https://drive.google.com/file/d/1WFg4cG3CWHRGLLJvhF3tQnHvI-E5nd59/view?usp=sharing"
+                            target="_blank" rel="noreferrer">Demo - Mobile</a>
+                        <a href="https://drive.google.com/file/d/1g5jlQOVXl17p0zd1A9kFrW-UomPfNJz7/view" target="_blank"
+                            rel="noreferrer">Demo - Web</a>
+                    </footer>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="card project-card">
+                    <header class="project-header">
+                        <div class="project-title">
+                            <h3>E‑Waste Management System</h3>
+                            <p class="muted project-subtitle">
+                                Truck Management Module to schedule, track, and manage vehicle utilization for efficient
+                                e‑waste collection.
+                            </p>
+                        </div>
+                        <!-- Date removed -->
+                    </header>
+
+                    <ul class="tags">
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MongoDB</li>
+                        <li>REST API</li>
+                    </ul>
+
+                    <div class="highlights">
+                        <p class="highlights-title">Highlights</p>
+                        <ul class="bullets compact">
+                            <li>Built responsive React components for real-time data interaction.</li>
+                            <li>Implemented RESTful APIs for truck allocation and status updates.</li>
+                            <li>Truck Maintenance - Implemented maintenance scheduling and tracking features [Fuel,
+                                Interior, Exterior].</li>
+                            <li>Implemented real-time tracking for delivery statuses.</li>
+                            <li>Generate informative categorical reports for each truck</li>
+                            <li>Calculate truck maintainance and send email to notify for immediate service.</li>
+                        </ul>
+                    </div>
+
+                    <footer class="card-actions">
+                        <a href="https://github.com/Arshvinth/E-waste_Management_System_Frontend.git" target="_blank"
+                            rel="noreferrer">Repo - frontend</a>
+                        <a href="https://github.com/Arshvinth/E-waste_management_system_Backend.git" target="_blank"
+                            rel="noreferrer">Repo - backend</a>
+                        <a href="https://drive.google.com/file/d/17FegCtGXLTkuUc2aLcnondOuNArO9y7K/view" target="_blank"
+                            rel="noreferrer">Live Demo</a>
+                    </footer>
+                </article>
+
+
+                <!-- Project 6 -->
+                <article class="card project-card">
+                    <header class="project-header">
+                        <div class="project-title">
+                            <h3>Hospital Management System</h3>
+                            <p class="muted project-subtitle">
+                                Doctor & Prescription Module for managing doctor profiles, availability tracking, and
+                                patient prescription workflows.
+                            </p>
+                        </div>
+                        <!-- Date removed -->
+                    </header>
+
+                    <ul class="tags">
+                        <li>Java</li>
+                        <li>MS SQL</li>
+                    </ul>
+
+                    <div class="highlights">
+                        <p class="highlights-title">Highlights</p>
+                        <ul class="bullets compact">
+                            <li>Doctor dashboard for managing appointments and patient interactions.</li>
+                            <li>Streamlined administration of medical professionals and profile management of doctors.
+                            </li>
+                            <li>Enabled doctors to access the patient history.</li>
+                            <li>Enabled doctors to add prescriptions per patient.</li>
+                        </ul>
+                    </div>
+
+                    <footer class="card-actions">
+                        <a href="https://github.com/Arshvinth/Hospital_management_system.git" target="_blank"
+                            rel="noreferrer">Repo</a>
+                    </footer>
+
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section container reveal">
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <p></p>
+            </div>
+
+            <div class="two-col">
+                <div class="panel">
+                    <h3>Programming</h3>
+                    <ul class="bullets">
+                        <li><strong>Languages:</strong> Java, Python, JavaScript, C++, Kotlin</li>
+                        <li><strong>Data & AI:</strong> Pandas, NumPy, Data Preprocessing, Prompt Engineering</li>
+                    </ul>
+                </div>
+
+                <div class="panel">
+                    <h3>Development</h3>
+                    <ul class="bullets">
+                        <li><strong>Web & Mobile:</strong> React.js, React Native, Node.js, Express.js, Spring Boot,
+                            HTML, CSS</li>
+                        <li><strong>Databases:</strong> MongoDB, MySQL, Microsoft SQL Server</li>
+                        <li><strong>Tools & Testing:</strong> Git, JIRA, Postman, Selenium WebDriver, Jest</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel" style="margin-top:16px;">
+                <h3>Languages</h3>
+                <ul class="tags">
+                    <li>English (Professional)</li>
+                    <li>Sinhala</li>
+                    <li>Tamil</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="section container reveal">
+            <div class="section-header">
+                <h2>Education</h2>
+            </div>
+
+            <div class="panel">
+                <div class="item-top">
+                    <h3>Bachelor of Information Technology (Software Engineering)</h3>
+                    <span class="muted">June 2023 – Present</span>
+                </div>
+
+                <p class="muted" style="margin: 8px 0 0;">
+                    Sri Lanka Institute of Information Technology (SLIIT) — Malabe
+                </p>
+                <p class="muted" style="margin: 8px 0 0;">
+                    Expected Graduation: <strong>2027</strong> • Current GPA: <strong>3.6/4.0</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="section container reveal">
+            <div class="section-header">
+                <h2>Certifications & Achievements</h2>
+            </div>
+
+            <div class="panel">
+                <ul class="bullets">
+                    <li>Dean’s List Certificate — 1st Year 2nd Semester (SLIIT)</li>
+                    <li>Dean’s List Certificate — 2nd Year 1st Semester (SLIIT)</li>
+                    <li>AI/ML Engineering Stage 1 — SLIIT</li>
+                    <li>AI‑Powered A/B Testing — SoloLearn</li>
+                    <li>MongoDB Node.js Developer Path — MongoDB University</li>
+                    <li>Generative AI in Practice — Coursera</li>
+                    <li>Agile Project Management — HP LIFE</li>
+                    <li>Data Science & Analytics, Vibe Coding — SoloLearn</li>
+                    <li>3 Stages Passed Finalist — AAT (Jan 2022)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section container reveal">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <p>
+                    Fastest way to reach me:
+                    <a href="mailto:arshvinths@gmail.com">arshvinths@gmail.com</a>
+                </p>
+            </div>
+
+            <!-- Simple contact area (no backend needed) -->
+            <div class="two-col">
+                <div class="panel">
+                    <h3>Links</h3>
+                    <ul class="bullets">
+                        <li><a href="https://github.com/Arshvinth?tab=repositories" target="_blank"
+                                rel="noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/arshvinth-sakthivel-7ba0942a9/" target="_blank"
+                                rel="noreferrer">LinkedIn</a></li>
+                        <li><a href="mailto:arshvinths@gmail.com">arshvinths@gmail.com</a></li>
+                    </ul>
+
+                    <button class="btn" type="button" id="copyEmailBtn">Copy my email</button>
+                    <p class="muted small" id="copyStatus" aria-live="polite"></p>
+                </div>
+
+                <div class="panel">
+                    <h3>Availability</h3>
+                    <p class="muted" style="margin:0;">
+                        Seeking a Software Engineering Internship (web/mobile/full-stack).
+                        Happy to work on product features, APIs, databases, testing, and automation.
+                    </p>
+
+                    <div class="divider"></div>
+
+                    <ul class="tags">
+                        <li>React</li>
+                        <li>React Native</li>
+                        <li>Node.js</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>MongoDB</li>
+                        <li>SQL</li>
+                        <li>REST APIs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="site-footer container">
+            <p class="muted small">© <span id="year"></span> Arshvinth • Built by me</p>
+        </footer>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
