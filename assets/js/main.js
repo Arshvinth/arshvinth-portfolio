@@ -1,18 +1,3 @@
-/*
-  main.js
-  -------
-  Adds:
-  1) Mobile menu toggle
-  2) Footer year
-  3) Copy email helper
-  4) Scroll reveal (IntersectionObserver)
-  5) Active nav link highlight (IntersectionObserver)
-  6) Theme toggle (dark/light) saved in localStorage
-
-  IMPORTANT:
-  - Update EMAIL and your social links in index.html.
-*/
-
 "use strict";
 
 /* =========================
@@ -45,11 +30,10 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 /* =========================
    3) Copy email helper
    =========================
-   Update EMAIL to your real email.
 */
 const copyBtn = document.getElementById("copyEmailBtn");
 const copyStatus = document.getElementById("copyStatus");
-const EMAIL = "you@example.com"; // TODO: set your email
+const EMAIL = "arshvinths@gmail.com"; 
 
 if (copyBtn) {
   copyBtn.addEventListener("click", async () => {
@@ -66,7 +50,6 @@ if (copyBtn) {
 /* =========================
    4) Scroll reveal
    =========================
-   Elements with .reveal fade/slide in when visible.
 */
 const revealEls = document.querySelectorAll(".reveal");
 
@@ -88,7 +71,6 @@ if (revealEls.length) {
 /* =========================
    5) Active nav highlight
    =========================
-   Highlights the current section's nav link as you scroll.
 */
 const sectionIds = ["projects", "skills", "education", "certifications", "contact"];
 const navAnchors = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
